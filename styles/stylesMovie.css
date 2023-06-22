@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.cardsMovie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 700px;
+    height: auto;
+    border-radius: 30px;
+    margin-top: 90px;
+}
+
+.cardsMovie>p:nth-of-type(2) {
+    padding: 20px;
+}
+
+.cardsMovie>img {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.cardsMovie>article:nth-of-type(1) {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardsMovie>article:nth-of-type(1) img {
+    width: 300px;
+    height: auto;
+}
+
+.cardsMovie>article:nth-of-type(1) svg {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cardsMovie>article:nth-of-type(1) svg.like {
+    animation: 1s like ease-in-out;
+
+}
+
+@keyframes like {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+
+    15% {
+        opacity: 1;
+        scale: 1.2;
+    }
+
+    30% {
+        scale: .95;
+    }
+
+    45%,
+    80% {
+
+        scale: 1;
+    }
+
+    100% {
+        scale: 0;
+        opacity: 1;
+    }
+}
+
+.cardsMovie article {
+    display: flex;
+    gap: 20px;
+}
+
+article img {
+    width: 60px;
+    height: 60px;
+}
+
+article button {
+    background-color: transparent;
+    border: none;
+    transition: 0.5;
+}
+
+article button:hover {
+    transform: scale(1.12);
+    cursor: pointer;
+
+}

@@ -1,0 +1,6 @@
+a {
+    text-decoration: none;
+}
+section> div {
+    display: flex;
+}
