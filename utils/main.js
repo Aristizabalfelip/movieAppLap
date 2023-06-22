@@ -8,12 +8,9 @@ getPopularMovies(link)
 
 const sectionPopular = document.querySelector('.popular')
 const paintPopular = (array) => {
-  
-
     const div = document.createElement('div')
     div.classList.add('divPopular');
     array.forEach(element => {
-        console.log(element);
         div.innerHTML += `<div class='cards'>
                            <a href="./pages/movie.html?id=${element.id}">
                            <img src="https://image.tmdb.org/t/p/w300${element.poster_path}" alt="">
@@ -33,30 +30,41 @@ form.addEventListener('submit', (event) => {
 
 const urlMovie = (movie) => {
     const link = `https://api.themoviedb.org/3/search/movie?query=${movie}&api_key=156de9a632e94cfb9b9a113793c69ef8`
-    getObjMovies(link)
+    const getCreation = JSON.parse(localStorage.getItem('createMovie')) || []
+    getObjMovies(link, getCreation)
 }
 
-const getObjMovies = async (l) => {
+const getObjMovies = async (link, local) => {
     try {
-        const res = await fetch(l)
+        const res = await fetch(link)
         const data = await res.json();
-        paintMovies(data.results);
+        paintMovies(data.results, local);
     } catch (error) {
-        console.log('error');
+        console.log(error);
     }
 }
 
 const sectionMovie = document.querySelector('.movieList')
-
-const paintMovies = (array) => {
+const paintMovies = (array, local) => {
     sectionMovie.innerHTML = ''
-    console.log(array);
-
     const div = document.createElement('div')
     div.classList.add('divMovies');
+    local.forEach(e => {
+        console.log(e);
+        div.innerHTML += `<div class='cardsMovie'>
+                           <a href="./pages/movie.html?id=${e.id}">
+                           <img src="${e.img}" alt="">
+                           <p>${e.nam}</p>
+                           <p>${e.year}</p>
+                           </a>
+                        </div>`;
+    });
 
     array.forEach(element => {
-        console.log(element.release_date.slice(0, 4));
+
+        if (element.poster_path === null) {
+            return
+        }
         div.innerHTML += `<div class='cardsMovie'>
                            <a href="./pages/movie.html?id=${element.id}">
                             <img src="https://image.tmdb.org/t/p/w300${element.poster_path}" alt="">
@@ -66,6 +74,10 @@ const paintMovies = (array) => {
                           </div>`;
 
     });
+    
+    
     sectionMovie.append(div)
+
+
 }
 

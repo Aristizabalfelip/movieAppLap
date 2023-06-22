@@ -4,13 +4,21 @@ body {
     flex-direction: column;
     gap: 100px;
 }
+
 a {
     text-decoration: none;
 }
+nav div a{ 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;   
+}
+
 p {
     color: aliceblue;
     font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16;
+
 }
 
 nav {
@@ -19,12 +27,15 @@ nav {
     background-color: rgb(11, 11, 11);
     justify-content: space-around;
     border-radius: 50px;
-    border: solid 6px #3e5f8a;
+    border: solid 6px blueviolet;
+    
 }
 
+
 nav img {
-    height: 30px;
+    height: 50px;
 }
+
 
 .popular {
     display: flex;
@@ -43,6 +54,7 @@ nav img {
     object-fit: cover;
     opacity: .8;
     transition: 0.5s ease;
+    font-size: 20px;
 }
 
 .cards:hover {
@@ -54,21 +66,27 @@ nav img {
     transform: scale(1.30);
 }
 
-
-
-
-
-
-
-
-
-
 .divMovies {
     display: flex;
+    padding: 60px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .divMovies div {
-    width: 150px;
-    /* height: 200px; */
+    width: 200px;
+    text-align: center;
+    transition: 0.5s ease;
+    padding: 10px;
+    font-size: 20px;
+}
+.divMovies div:hover {
+    width: auto;
+    border: 3px solid;
+    border-color: blueviolet;
+    cursor: pointer;
+    transform: scale(1.30);
+    background-color: black;
+    filter: contrast(140%);
+    padding: 20px;
 }
