@@ -1,5 +1,7 @@
 body {
-    background-color: rgb(12, 12, 12);
+    background-image: linear-gradient(90deg,
+    blueviolet,
+    black);
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -68,7 +70,27 @@ form {
 nav input:nth-of-type(1) {
     height: 26px;
 }
+nav input:nth-of-type(1):hover {
+border: 3px solid blueviolet;
+width: 180px;
+height: 30px;
+}
+nav> a:nth-of-type(1) {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+}
 
+nav> a:nth-of-type(1) span{
+font-size: 20px;
+font-weight: 600;
+background-color: rgba(43, 41, 41, 0.8);
+padding: 6px;
+border-radius: 50%;
+text-align: center;
+height: 20px;
+width: 23px;
+}
 
 
 

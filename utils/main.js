@@ -21,7 +21,6 @@ const paintPopular = (array) => {
     sectionPopular.append(div)
 }
 
-
 const form = document.querySelector('form');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -61,8 +60,7 @@ const paintMovies = (array, local) => {
     });
 
     array.forEach(element => {
-
-        if (element.poster_path === null) {
+    if (element.poster_path === null) {
             return
         }
         div.innerHTML += `<div class='cardsMovie'>
@@ -72,12 +70,16 @@ const paintMovies = (array, local) => {
                             <p>${element.release_date.slice(0, 4)}</p>
                            </a>
                           </div>`;
-
-    });
-    
-    
+    });   
     sectionMovie.append(div)
-
-
 }
 
+const buttonHeart = document.querySelector('nav> a:nth-of-type(1)')
+const numberFavourites = () => {
+    const getMovie = JSON.parse(localStorage.getItem('Movie'))
+    const span = document.createElement('span')
+    span.innerHTML = `${getMovie.length}`;
+    buttonHeart.append(span)
+    
+}
+numberFavourites();

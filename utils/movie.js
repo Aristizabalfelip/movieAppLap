@@ -51,8 +51,7 @@ const paintMovie = (obj, cred,idTrailer) => {
                        <article>
                         <p>Year: ${obj.release_date.slice(0, 4)}</p>
                         <p>${obj.runtime} mnts</p>
-                        <p>Directing: ${filterArray[0].name}</p>
-                      
+                        <p>Directing: ${filterArray[0].name}</p>                      
                         <button onclick="saveInfo('${obj.original_title}','${obj.release_date.slice(0, 4)}','${obj.poster_path}','${obj.id}')"><img src="../assets/${exist ? 'redHeart' : 'blackHeart'}.png" alt=""></button>
                        </article>
                        <p>${obj.overview}</p>
@@ -64,6 +63,7 @@ const paintMovie = (obj, cred,idTrailer) => {
 
     const img = document.querySelector('.cardsMovie article:nth-of-type(1) img')
     const svg = document.querySelector('.cardsMovie article:nth-of-type(1) svg')
+    console.log(img,svg);
     img.addEventListener('dblclick', () => {
         svg.classList.add('like')
         saveInfo(obj.original_title, obj.release_date.slice(0, 4), obj.poster_path, obj.id)
