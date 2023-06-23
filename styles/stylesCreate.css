@@ -11,17 +11,17 @@ a {
     text-decoration: none;
 }
 
+
+p {
+    color: aliceblue;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+}
 nav div a {
     display: flex;
     align-items: center;
     gap: 20px;
     font-size: 30px;
-}
-
-p {
-    color: aliceblue;
-    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
 nav {
@@ -72,9 +72,6 @@ form {
 nav input:nth-of-type(1) {
     height: 26px;
 }
-
-
-
 
 
 .form {

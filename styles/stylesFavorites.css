@@ -1,22 +1,83 @@
 body {
     background-image: linear-gradient(89deg,
-    blueviolet,
-    black);
+            blueviolet,
+            black);
 }
+
 a {
     text-decoration: none;
 }
-section> div {
+p {
+    color: aliceblue;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(11, 11, 11, 0.9);
+    justify-content: space-around;
+    border-radius: 50px;
+    border: solid 6px blueviolet;
+
+}
+nav div a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+}
+
+
+nav img {
+    height: 50px;
+}
+
+nav input:nth-of-type(2) {
+    border: 0;
+    background-image: linear-gradient(90deg,
+            blueviolet,
+            black);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    padding: 6px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+nav input:nth-of-type(2):hover {
+    border: 3px solid;
+    border-color: blueviolet;
+    background: none;
+}
+
+nav input:nth-of-type(2):hover {
+    transform: scale(0.9);
+
+}
+
+section>div {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+
+}
+
+section>div>div {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    align-items: center;
+    border-radius: 8px;
+
 }
 
 .articleHeart {
-
     position: relative;
     display: flex;
-
     align-items: center;
     justify-content: center;
 }
@@ -35,6 +96,7 @@ section> div {
 .articleHeart img:nth-of-type(2).like {
     animation: 1s like ease-in-out;
 }
+
 @keyframes like {
     0% {
         opacity: 0;
@@ -92,7 +154,7 @@ section> div {
 
 
 
-.bubble  {
+.bubble {
     opacity: .3;
 
     position: absolute;
@@ -100,76 +162,86 @@ section> div {
 
     animation: bubbles 3s linear infinite;
 }
-.bubble:nth-child(1)  {
+
+.bubble:nth-child(1) {
     width: 80px;
     height: 80px;
     left: 5%;
     animation-duration: 3s;
     animation-delay: 3s;
 }
+
 .bubble:nth-child(2) {
     width: 100px;
     height: 100px;
     left: 20%;
     animation-duration: 3s;
     animation-delay: 5s;
-} 
+}
+
 .bubble:nth-child(3) {
     width: 20px;
     height: 20px;
     left: 30%;
     animation-duration: 7s;
     animation-delay: 2s;
-} 
+}
+
 .bubble:nth-child(4) {
     width: 50px;
     height: 50px;
     left: 90%;
     animation-duration: 6s;
     animation-delay: 3s;
-} 
+}
+
 .bubble:nth-child(5) {
     width: 70px;
     height: 70px;
     left: 65%;
     animation-duration: 3s;
     animation-delay: 1s;
-} 
+}
+
 .bubble:nth-child(6) {
     width: 20px;
     height: 20px;
     left: 50%;
     animation-duration: 4s;
     animation-delay: 5s;
-} 
+}
+
 .bubble:nth-child(7) {
     width: 20px;
     height: 20px;
     left: 50%;
     animation-duration: 4s;
     animation-delay: 5s;
-} 
+}
+
 .bubble:nth-child(8) {
     width: 100px;
     height: 100px;
     left: 52%;
     animation-duration: 5s;
     animation-delay: 5s;
-} 
+}
+
 .bubble:nth-child(9) {
     width: 65px;
     height: 65px;
     left: 51%;
     animation-duration: 3s;
     animation-delay: 2s;
-} 
+}
+
 .bubble:nth-child(10) {
     width: 40px;
     height: 40px;
     left: 35%;
     animation-duration: 3s;
     animation-delay: 4s;
-} 
+}
 
 @keyframes bubbles {
     0% {

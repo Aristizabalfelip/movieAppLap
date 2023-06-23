@@ -80,6 +80,5 @@ const numberFavourites = () => {
     const span = document.createElement('span')
     span.innerHTML = `${getMovie.length}`;
     buttonHeart.append(span)
-    
 }
 numberFavourites();

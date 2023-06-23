@@ -8,15 +8,14 @@ const paintFavorites = () => {
   getMovie.forEach(element => {
     div.innerHTML += `<div> 
                           <article class="articleHeart">
-                            <img src="https://image.tmdb.org/t/p/w200${element.img}" alt="${element.id}" >
-                            <img src="../assets/brokenHeart.svg" width="100" height="100" viewBox="0 0 100 100">
-                        
+                            <img src="https://image.tmdb.org/t/p/w200${element.img} " alt="${element.id}" >
+                            <img src="../assets/brokenHeart.svg" width="100" height="100" viewBox="0 0 100 100"> 
                           </article>
                           <a href="../pages/movie.html?id=${element.id}"> 
                            <p>${element.nam}</p> 
                           </a>                         
                          </div>
-                         `
+                         `;
   });
   section.append(div)
 
