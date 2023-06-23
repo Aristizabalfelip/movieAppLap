@@ -1,7 +1,6 @@
 const section = document.querySelector('section');
 const getMovie = JSON.parse(localStorage.getItem('Movie'))
 
-
 const paintFavorites = () => {
   const getMovie = JSON.parse(localStorage.getItem('Movie'))
   section.innerHTML = ''
@@ -21,19 +20,15 @@ const paintFavorites = () => {
 paintFavorites()
 
 const deleteFavorite = (ids) => {
-
   const getMovie = JSON.parse(localStorage.getItem('Movie'))
   const filterArray = getMovie.filter(mo => {
 
     if (mo.id != ids) {
-      console.log('entra');
       return true
     }
     return false
 
   });
-  console.log(filterArray);
   localStorage.setItem('Movie', JSON.stringify(filterArray))
   paintFavorites()
-
 }
