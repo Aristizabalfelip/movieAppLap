@@ -82,3 +82,4 @@ const numberFavourites = () => {
     buttonHeart.append(span)
 }
 numberFavourites();
+

@@ -98,18 +98,23 @@ width: 23px;
 
 
 
-
+.movieList {
+    padding: 50px;
+}
 
 
 .popular {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
 .divPopular {
     display: flex;
     justify-content: center;
+    padding: 50px;
+ 
 }
 
 .cards {
@@ -129,12 +134,17 @@ width: 23px;
     text-align: center;
     transform: scale(1.30);
 }
+.cardsMovie img{
+width: 300px;
+height: 450px;
+}
 
 .divMovies {
     display: flex;
     padding: 60px;
     flex-wrap: wrap;
     gap: 15px;
+    margin-right: 50px;
 }
 
 .divMovies div {
@@ -146,6 +156,9 @@ width: 23px;
 }
 
 .divMovies div:hover {
+    display: flex;
+    flex-wrap: nowrap;
+  
     width: auto;
     border: 3px solid;
     border-color: blueviolet;
@@ -154,4 +167,9 @@ width: 23px;
     background-color: black;
     filter: contrast(140%);
     padding: 20px;
+    text-align: center;
+}
+.divMovies div p{
+    width: 180px;
+    text-align: center;
 }

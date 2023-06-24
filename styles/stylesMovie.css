@@ -1,7 +1,6 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
 }
 
@@ -14,6 +13,67 @@ p {
     font-size: 25px;
     font-weight: 500;
 }
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    justify-content: space-around;
+    border-radius: 50px;
+    border: solid 6px blueviolet;
+
+}
+
+nav div a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 30px;
+}
+
+
+nav img {
+    height: 50px;
+}
+
+nav input:nth-of-type(2) {
+    border: 0;
+    background-image: linear-gradient(90deg,
+            blueviolet,
+            black);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 18px;
+    padding: 6px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+nav input:nth-of-type(2):hover {
+    border: 3px solid;
+    border-color: blueviolet;
+    background: none;
+}
+
+nav input:nth-of-type(2):hover {
+    transform: scale(0.9);
+
+}
+
+.divMovie {
+    display: flex;
+    justify-content: center;
+}
+
+.trailer>div {
+    display: flex;
+    justify-content: center;
+}
+
+.trailer iframe {
+    border: solid 20px;
+}
+
 
 .cardsMovie {
     display: flex;
@@ -100,11 +160,11 @@ article img {
 article button {
     background-color: transparent;
     border: none;
-   
+
 }
 
 article button:hover {
     transform: scale(1.12);
     cursor: pointer;
-   
+
 }
