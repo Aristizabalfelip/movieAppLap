@@ -75,20 +75,19 @@ section>div>div {
     padding: 20px;
     align-items: center;
     border-radius: 8px;
-
+}
+.articleHeart img:nth-of-type(1){
+    width: 300px;
+    height: 450px;
 
 }
+
 
 .articleHeart {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.articleHeart img:nth-of-type(1) {
-    width: 300px;
-    height: auto;
 }
 
 .articleHeart img:nth-of-type(2) {
@@ -127,36 +126,6 @@ section>div>div {
         opacity: 1;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .bubble {
     opacity: .3;

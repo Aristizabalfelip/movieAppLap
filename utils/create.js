@@ -10,6 +10,7 @@ const paintQuestion = () => {
 }
 
 const createForm = () => {
+   
    const divRight = document.createElement('div');
    divRight.innerHTML = `<h3>Create your movie</h3>
                         <form action="" class= 'formulario'>
@@ -46,5 +47,6 @@ const saveCreation = (form) => {
          getCreation.push(obj)
       }
       localStorage.setItem('createMovie', JSON.stringify(getCreation))
+      secForm.innerHTML ='';
    })
 }

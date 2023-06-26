@@ -2,12 +2,13 @@ const section = document.querySelector('section');
 const getMovie = JSON.parse(localStorage.getItem('Movie'))
 
 const imageUrl = (poster) => {
- console.log(poster);
-  try {
-   return `https://image.tmdb.org/t/p/w200${poster}`
-} catch (error) {
-  return `${poster}`
+  console.log(poster.length);
+if (poster.length <40  ) {
+  return `https://image.tmdb.org/t/p/w200${poster}`
+} else {
+  return poster
 }
+
 }
 
 
